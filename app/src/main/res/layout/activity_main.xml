@@ -8,5 +8,15 @@
         android:text="作业一"
         android:id="@+id/work1"
         android:layout_height="wrap_content" />
+    <Button
+        android:layout_width="match_parent"
+        android:text="作业"
+        android:id="@+id/work2"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_width="match_parent"
+        android:text="作业三"
+        android:id="@+id/work3"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

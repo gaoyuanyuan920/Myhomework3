@@ -25,7 +25,11 @@
         <service
             android:name=".MyService2"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
+
+        <activity android:name=".Ch2Activity" />
+        <activity android:name=".Ch3Activity" />
+        <activity android:name=".MyOpenHelper"></activity>
     </application>
 
 </manifest>

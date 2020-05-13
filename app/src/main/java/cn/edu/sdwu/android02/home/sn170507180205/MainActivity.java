@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button button = (Button) findViewById(R.id.work1);
+        //Button button1 = (Button) findViewById(R.id.work2);
         class myclass implements View.OnClickListener {
             @Override
             public void onClick(View view) {
@@ -22,5 +23,23 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }
+        Button button1 = (Button) findViewById(R.id.work2);
+        button1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                //界面跳转
+                Intent intent = new Intent(MainActivity.this, Ch2Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button button2 = (Button) findViewById(R.id.work3);
+        button1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                //界面跳转
+                Intent intent = new Intent(MainActivity.this, Ch3Activity.class);
+                startActivity(intent);
+            }
+
+        });
     }
 }

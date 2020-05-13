@@ -19,7 +19,6 @@ public class Ch1Activity extends AppCompatActivity {
         setContentView(R.layout.layout_ch1);
         bound = false;
         serviceConnection = new ServiceConnection() {
-
             @Override
             public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
                 bound = true;
@@ -50,14 +49,13 @@ public class Ch1Activity extends AppCompatActivity {
         startServiceClick(view);
     }
 
-    private void startServiceClick(View view) {
-        //使用本方法 同一处理用户的点击（启动方式的按键）
+    public void startServiceClick(View view) {
+        //使用本方法 统一处理用户的点击 (启动方式的按键)
         int id = view.getId();
         Intent intent = new Intent(this, MediaService.class);
         switch (id) {
             case R.id.ch12_2_start:
-                intent.putExtra("PlayerState", "SRART");
-                startService(intent);
+                intent.putExtra("PlayerState", "START");
                 break;
             case R.id.ch12_2_pause:
                 intent.putExtra("PlayerState", "PAUSE");
@@ -66,9 +64,8 @@ public class Ch1Activity extends AppCompatActivity {
                 intent.putExtra("PlayerState", "STOP");
                 break;
             case R.id.ch12_2_stopservice:
-                intent.putExtra("PlayerState", "STARTSERVICE");
+                intent.putExtra("PlayerState", "STOPSERVICE");
                 break;
-
         }
         startService(intent);
     }
@@ -80,11 +77,10 @@ public class Ch1Activity extends AppCompatActivity {
                 Intent intent = new Intent(this, MediaService.class);
                 bindService(intent, serviceConnection, BIND_AUTO_CREATE);
                 break;
-            case R.id.ch12_2_unbind:
+            case R.id.ch12_2_ubind:
                 unbindService(serviceConnection);
                 bound = false;
                 break;
-
             case R.id.ch12_2_bindstart:
                 if (bound) {
                     mediaService.start();
@@ -103,3 +99,4 @@ public class Ch1Activity extends AppCompatActivity {
         }
     }
 }
+

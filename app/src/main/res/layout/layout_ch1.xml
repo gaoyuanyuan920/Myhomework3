@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent">
+
     <Button
         android:layout_width="wrap_content"
         android:text="播放"
@@ -31,8 +32,6 @@
         android:onClick="ch12_2_stopservice"
         android:layout_height="wrap_content" />
 
-
-
     <Button
         android:layout_width="wrap_content"
         android:text="绑定"
@@ -59,11 +58,10 @@
         android:id="@+id/ch12_2_bindstop"
         android:onClick="bindClick"
         android:layout_height="wrap_content" />
-
     <Button
         android:layout_width="wrap_content"
         android:text="解绑"
-        android:id="@+id/ch12_2_unbind"
+        android:id="@+id/ch12_2_ubind"
         android:onClick="bindClick"
         android:layout_height="wrap_content" />
 </LinearLayout>
